@@ -15,6 +15,7 @@ export default function Profile({ profile, content }: ProfileProps) {
   const isMinimal = theme === 'minimal'
   const isPhoto = theme === 'photo'
   const isCard = theme === 'card'
+  const isGradient = theme === 'gradient'
 
   return (
     <div className="w-full max-w-2xl mx-auto px-4 py-8 sm:py-12">
@@ -29,18 +30,18 @@ export default function Profile({ profile, content }: ProfileProps) {
         <h1 className={`
           text-3xl sm:text-4xl
           font-[var(--title-weight)]
-          text-[var(--text)]
           mb-2
           ${isMinimal ? 'font-mono' : ''}
+          ${isGradient ? 'text-white' : 'text-[var(--text)]'}
         `}>
           {name}
         </h1>
 
         <p className={`
           text-lg sm:text-xl
-          text-[var(--subtext)]
           mb-4
           ${isMinimal ? 'font-mono' : ''}
+          ${isGradient ? 'text-white/85' : 'text-[var(--subtext)]'}
         `}>
           {handle}
         </p>
@@ -49,10 +50,10 @@ export default function Profile({ profile, content }: ProfileProps) {
         {bio && (
           <p className={`
             text-base sm:text-lg
-            text-[var(--text)]
             max-w-md mx-auto
             leading-relaxed
             mb-6
+            ${isGradient ? 'text-white' : 'text-[var(--text)]'}
           `}>
             {bio}
           </p>
@@ -86,7 +87,7 @@ export default function Profile({ profile, content }: ProfileProps) {
       {/* Footer */}
       {footer && (
         <footer className="text-center mt-12 sm:mt-16">
-          <p className="text-sm text-[var(--subtext)]">
+          <p className={`text-sm ${isGradient ? 'text-white/70' : 'text-[var(--subtext)]'}`}>
             {footer}
           </p>
         </footer>

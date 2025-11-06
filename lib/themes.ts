@@ -70,7 +70,7 @@ export function getThemeTokens(
         background: '#FFFFFF',
         surface: '#F8F9FA',
         text: '#111111',
-        subtext: '#6B7280',
+        subtext: '#374151',
         accent: accentColor || '#5B8CFF',
         accentHover: accentColor ? darkenColor(accentColor, 10) : '#4A7AE8',
         accentText: '#FFFFFF',
@@ -133,14 +133,14 @@ export function getThemeTokens(
 
     gradient: {
       colors: {
-        background: 'linear-gradient(180deg, #EEF2FF 0%, #FFFFFF 100%)',
+        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%)',
         surface: '#FFFFFF',
         text: '#1F2937',
         subtext: '#6B7280',
-        accent: accentColor || '#6366F1',
-        accentHover: accentColor ? darkenColor(accentColor, 10) : '#4F46E5',
+        accent: accentColor || '#667eea',
+        accentHover: accentColor ? darkenColor(accentColor, 10) : '#5568d3',
         accentText: '#FFFFFF',
-        border: '#E0E7FF',
+        border: '#E5E7EB',
       },
       radii: {
         xs: '8px',
@@ -160,7 +160,7 @@ export function getThemeTokens(
         bodyWeight: 400,
       },
       effects: {
-        shadow: '0 1px 2px rgba(99, 102, 241, 0.1)',
+        shadow: '0 4px 12px rgba(102, 126, 234, 0.2)',
       },
     },
 

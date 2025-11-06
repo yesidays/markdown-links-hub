@@ -25,7 +25,7 @@ export default function Profile({ profile, content, tokens }: ProfileProps) {
       {/* Header */}
       <header className="text-center mb-8 sm:mb-10">
         {/* Avatar */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-6 animate-fade-in opacity-0">
           <Avatar src={avatar} alt={name} theme={theme} avatarStyle={variant?.avatarStyle} />
         </div>
 
@@ -34,6 +34,7 @@ export default function Profile({ profile, content, tokens }: ProfileProps) {
           text-3xl sm:text-4xl
           font-[var(--title-weight)]
           mb-2
+          animate-fade-in stagger-1 opacity-0
           ${isMinimal ? 'font-mono' : ''}
           ${isGradient ? 'text-white' : 'text-[var(--text)]'}
         `}>
@@ -43,6 +44,7 @@ export default function Profile({ profile, content, tokens }: ProfileProps) {
         <p className={`
           text-lg sm:text-xl
           mb-4
+          animate-fade-in stagger-2 opacity-0
           ${isMinimal ? 'font-mono' : ''}
           ${isGradient ? 'text-white/85' : 'text-[var(--subtext)]'}
         `}>
@@ -56,6 +58,7 @@ export default function Profile({ profile, content, tokens }: ProfileProps) {
             max-w-md mx-auto
             leading-relaxed
             mb-6
+            animate-fade-in stagger-3 opacity-0
             ${isGradient ? 'text-white' : 'text-[var(--text)]'}
           `}>
             {bio}
@@ -64,7 +67,7 @@ export default function Profile({ profile, content, tokens }: ProfileProps) {
 
         {/* Social Links */}
         {social && social.length > 0 && (
-          <div className="mb-6">
+          <div className="mb-6 animate-fade-in stagger-4 opacity-0">
             <SocialLinks social={social} />
           </div>
         )}

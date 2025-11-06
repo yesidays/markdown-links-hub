@@ -96,10 +96,13 @@ export default function LinkCard({ link, theme, variant }: LinkCardProps) {
             </h3>
             {link.badge && (
               <span className={`
-                px-2 py-0.5 text-xs font-medium rounded-full
+                px-2.5 py-1 text-xs font-semibold rounded-full
                 bg-[var(--accent)]
                 text-[var(--accent-text)]
                 flex-shrink-0
+                shadow-sm
+                group-hover:shadow-md
+                transition-shadow duration-200
               `}>
                 {link.badge}
               </span>
@@ -116,8 +119,8 @@ export default function LinkCard({ link, theme, variant }: LinkCardProps) {
         <div className={`
           flex-shrink-0 text-[var(--subtext)]
           group-hover:text-[var(--accent)]
-          group-hover:translate-x-1
-          transition-all duration-200
+          group-hover:translate-x-2
+          transition-all duration-300 ease-out
         `}>
           <svg
             width="20"
